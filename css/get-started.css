@@ -64,15 +64,7 @@
 #main-container .content section p {
   font-size: 1.1rem;
   font-weight: 300;
-  margin: 0;
-}
-#main-container .content section a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: all 0.1s ease-out;
-}
-#main-container .content section a:hover {
-  text-decoration: underline;
+  line-height: 1.5;
 }
 @media screen and (max-width: 700px) {
   #main-container .content section header h2 {
@@ -82,7 +74,7 @@
     font-size: 1.3rem;
   }
   #main-container .content section p, #main-container .content ol, #main-container .content ul {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 @media screen and (max-width: 500px) {

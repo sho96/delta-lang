@@ -16,6 +16,21 @@
             <p>Delta is currently in pre-release version.</p>
         </div>
         <div class="content">
+            <section id="usage">
+                <header>
+                    <h2>Usage</h2>
+                </header>
+                <p>Get <code>compile.py</code> from <a target="_blank" href="https://github.com/sho96/Delta">GitHub</a></p>
+                <ol>
+                    <li>
+                        <p>Compile .py to .cpp</p>
+                        <p>You can compile .py to .cpp by running</p>
+                        <code>python compile.py [filename].py</code>
+                        <p>This will generate <code>[filename].cpp</code></p>
+                    </li>
+                </ol>
+                <p>When compiling from .cpp, make sure to use c++17 or higher</p>
+            </section>
             <section id="installation">
                 <header>
                     <h2>Installation</h2>
@@ -39,19 +54,17 @@
                     <li>compile.py from <a target="_blank" href="https://github.com/sho96/Delta/tree/master/compile.py">here</a></li>
                 </ul>
                 <ol>
-                    <li>Install Pyinstaller by <br><br>
-                        <code>pip install pyinstaller</code><br><br>
+                    <li><p>Install Pyinstaller by running</p>
+                        <code>pip install pyinstaller</code>
                         <p>Make sure you are installing for Python 3.12+</p>
                     </li>
                     <br>
-                    <li>Generate compiler executable by <br><br>
-                        <code>pyinstaller --onefile compile.py</code><br><br>
+                    <li><p>Generate compiler executable by running</p>
+                        <code>pyinstaller --onefile compile.py</code>
                         <p>Your compiler will be in <code>./dist</code></p>
                     </li>
-
                 </ol>
             </section>
-
         </div>
     </div>
     <%- include('../templates/footer.ejs')%>

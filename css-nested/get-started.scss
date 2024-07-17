@@ -62,15 +62,7 @@
             p{
                 font-size: 1.1rem;
                 font-weight: 300;
-                margin: 0;
-            }
-            a{
-                color: var(--accent-color);
-                text-decoration: none;
-                transition: all 0.1s ease-out;
-            }
-            a:hover{
-                text-decoration: underline;
+                line-height: 1.5;
             }
         }
         @media screen and (max-width: 700px) {
@@ -81,7 +73,7 @@
                 font-size: 1.3rem;
             }
             section p,ol,ul{
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
         }
         @media screen and (max-width: 500px) {

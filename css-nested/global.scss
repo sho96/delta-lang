@@ -49,8 +49,19 @@ code{
     font-family: "Roboto Mono", monospace;
     background-color: var(--background-color-lighter);
     margin: 3px;
-    padding: 3px;
+    padding: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
     border-radius: 5px;
+    width: fit-content;
+}
+a{
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.1s ease-out;
+}
+a:hover{
+    text-decoration: underline;
 }
 
 .unselectable {
