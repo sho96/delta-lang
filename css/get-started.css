@@ -44,7 +44,6 @@
   justify-content: center;
   text-wrap: wrap;
   text-align: left;
-  padding: 20px;
 }
 #main-container .content section {
   width: calc(100% - 40px);
