@@ -106,7 +106,7 @@ a:hover {
 nav {
   position: sticky;
   top: 0;
-  backdrop-filter: blur(15px) brightness(50%);
+  backdrop-filter: blur(5px) brightness(50%);
   padding: 10px;
   padding-left: 10px;
   padding-right: 50px;
