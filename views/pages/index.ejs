@@ -1,52 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="icon" href="/imgs/logo.svg">
-    <title>DELTA LANG</title>
-</head>
-<body>
-    <%- include('../templates/navbar.ejs')%>
-    <header id="header-top">
-        <div class="left">
-            <img src="/imgs/logo.svg" alt="">
-            <h1 class="unselectable">DELTA</h1>
-        </div>
-        <div class="right">
-            <h2>The Best Python to C++ Compiler</h2>
-        </div>
-    </header>
-    <div class="var-width-container">
-        <section id="phrase-of-update">
-            <h1>Write in Python<br>Run in C++</h1>
-        </section>
-        <section id="download">
-            <header>
-                <h1>Start Using Delta</h1>
-                <p>currently pre-release</p>
-            </header>
-            <div name="download-container">
-                <h1>Try Latest Version</h1>
-                <div class="button-wrap">
-                    <a target="_blank" href="https://github.com/sho96/Delta">Go to GitHub</a>
-                </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/global.css" />
+        <link rel="stylesheet" href="/css/index.css" />
+        <link rel="icon" href="/imgs/logo.svg" />
+        <title>DELTA LANG</title>
+    </head>
+    <body>
+        <%- include('../templates/navbar.ejs')%>
+        <header id="header-top">
+            <div class="left">
+                <img src="/imgs/logo.svg" alt="" />
+                <h1 class="unselectable">DELTA</h1>
             </div>
-        </section>
-        <section id="updates">
-            <header>
-                <h1>Updates</h1>
-            </header>
-            <div name="update-container">
-                <div class="update">
-                    <h2>Pre-Release 1.0.0</h2>
-                    <p>Jul 16, 2024</p>
-                </div>
+            <div class="right">
+                <h2>The Best Python to C++ Compiler</h2>
             </div>
-        </section>
-    </div>
-    <%- include('../templates/footer.ejs')%>
-</body>
+        </header>
+        <div class="var-width-container">
+            <section id="phrase-of-update">
+                <h1>Write in Python<br />Run in C++</h1>
+            </section>
+            <section id="download">
+                <header>
+                    <h1>Start Using Delta</h1>
+                    <p>currently pre-release</p>
+                </header>
+                <div name="download-container">
+                    <h1>Try Latest Version</h1>
+                    <div class="button-wrap">
+                        <a target="_blank" href="https://github.com/sho96/Delta"
+                            >Go to GitHub</a
+                        >
+                    </div>
+                </div>
+            </section>
+            <section id="updates">
+                <header>
+                    <h1>Updates</h1>
+                </header>
+                <div name="update-container">
+                    <div class="update">
+                        <h2>Pre-Release 1.0.0</h2>
+                        <p>Jul 16, 2024</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <%- include('../templates/footer.ejs')%>
+    </body>
+    <script>
+        window.va =
+            window.va ||
+            function () {
+                (window.vaq = window.vaq || []).push(arguments);
+            };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </html>
