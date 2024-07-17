@@ -66,6 +66,10 @@
   font-weight: 300;
   line-height: 1.5;
 }
+#main-container .content section ol.li, #main-container .content section ul.li {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
 @media screen and (max-width: 700px) {
   #main-container .content section header h2 {
     font-size: 2rem;
@@ -75,6 +79,9 @@
   }
   #main-container .content section p, #main-container .content ol, #main-container .content ul {
     font-size: 1.1rem;
+  }
+  #main-container .content section ol.li, #main-container .content ul.li {
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 500px) {
@@ -86,5 +93,8 @@
   }
   #main-container .content section p, #main-container .content ol, #main-container .content ul {
     font-size: 0.8rem;
+  }
+  #main-container .content section ol.li, #main-container .content ul.li {
+    font-size: 0.9rem;
   }
 }

@@ -64,6 +64,10 @@
                 font-weight: 300;
                 line-height: 1.5;
             }
+            ol.li,ul.li{
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
         }
         @media screen and (max-width: 700px) {
             section header h2{
@@ -75,6 +79,9 @@
             section p,ol,ul{
                 font-size: 1.1rem;
             }
+            section ol.li,ul.li{
+                font-size: 1.2rem;
+            }
         }
         @media screen and (max-width: 500px) {
             section header h2{
@@ -85,6 +92,9 @@
             }
             section p,ol,ul{
                 font-size: 0.8rem;
+            }
+            section ol.li,ul.li{
+                font-size: 0.9rem;
             }
         }
     }
