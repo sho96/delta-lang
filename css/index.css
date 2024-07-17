@@ -247,13 +247,13 @@ section {
 }
 #download div[name=download-container] .button-wrap {
   padding: 1px;
-  background: linear-gradient(30deg, rgba(255, 219, 0, 0) 0%, rgba(255, 0, 0, 0) 31%, rgba(255, 0, 231, 0) 59%, rgba(221, 255, 0, 0) 91%);
+  /* background: linear-gradient(30deg, rgba(255,219,0,0) 0%, rgba(255,0,0,0) 31%, rgba(255,0,231,0) 59%, rgba(221,255,0,0) 91%); */
+  background: linear-gradient(30deg, rgb(255, 219, 0) 0%, rgb(255, 0, 0) 31%, rgb(255, 0, 231) 59%, rgb(221, 255, 0) 91%);
   height: fit-content;
   transition: all 0.1s ease-in-out;
 }
 #download div[name=download-container] .button-wrap:hover {
-  background: linear-gradient(30deg, rgb(255, 219, 0) 0%, rgb(255, 0, 0) 31%, rgb(255, 0, 231) 59%, rgb(221, 255, 0) 91%);
-  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
 }
 #download div[name=download-container] a {
   display: flex;
@@ -271,10 +271,10 @@ section {
   font-size: 1.2rem;
   width: 200px;
   font-family: "Roboto Mono", monospace;
+  color: var(--text-color);
   transition: all 0.125s ease-in-out;
 }
 #download div[name=download-container] a:hover {
-  color: var(--text-color);
   text-shadow: 0px 0px 0px var(--text-color), 0px 0px 20px var(--text-color);
 }
 @media screen and (max-width: 700px) {
