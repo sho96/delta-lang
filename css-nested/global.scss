@@ -104,7 +104,7 @@ nav {
     position: sticky;
     top: 0;
 
-    backdrop-filter: blur(5px) brightness(50%);
+    backdrop-filter: blur(10px) brightness(50%);
 
     padding: 10px;
     padding-left: 10px;
@@ -115,7 +115,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
 
     border-bottom: 1px solid gray;
 
@@ -166,7 +166,7 @@ nav {
     }
 
     @media screen and (max-width: 700px) {
-        backdrop-filter: blur(10px) brightness(50%);
+        backdrop-filter: blur(5px) brightness(50%);
 
         gap: 20px;
         font-size: 1rem;
