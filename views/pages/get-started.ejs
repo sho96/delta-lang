@@ -25,11 +25,15 @@
                     <li>Python 3.12+</li>
                     <li>compile.py from <a target="_blank" href="https://github.com/sho96/Delta/tree/master/compile.py">here</a></li>
                 </ul>
+
+                <p>The file extension of delta file is <code>.dt</code><br>
+                Delta file can be written in Python with type annotations</p>
+
                 <ol>
                     <li>
-                        <p>Compile .py to .cpp</p>
-                        <p>You can compile .py to .cpp by running</p>
-                        <p><code>python compile.py [filename].py</code>.
+                        <p>Compile .dt to .cpp</p>
+                        <p>You can compile .dt to .cpp by running</p>
+                        <p><code>python compile.py [filename].dt</code>.
                         Make sure that Python version is 3.12+</p>
                         <p>This will generate <code>[filename].cpp</code></p>
                     </li>
@@ -69,7 +73,7 @@
                     <br>
                     <li><p>Generate compiler executable by running</p>
                         <code>pyinstaller --onefile compile.py</code>
-                        <p>Your compiler will be in <code>./dist</code></p>
+                        <p>Your executable will be in <code>./dist</code></p>
                     </li>
                 </ol>
             </section>
