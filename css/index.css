@@ -48,10 +48,10 @@ nav .nav-button a {
   padding-right: 5px;
   color: var(--text-color);
   transition: all 0.2s cubic-bezier(1, 0, 0.5, 1);
-  width: 100px;
+  width: 200px;
 }
 nav .nav-button:hover {
-  box-shadow: inset 100px 0 0 0 var(--accent-color);
+  box-shadow: inset 200px 0 0 0 var(--accent-color);
 }
 nav .nav-button:hover p {
   color: var(--background-color);
@@ -175,14 +175,15 @@ section {
   align-items: center;
   border-bottom: 1px solid gray;
   margin: 0;
+  margin-top: 20px;
 }
 
 #phrase-of-update {
+  margin: 0;
   justify-content: center;
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
-  margin: 0;
 }
 #phrase-of-update h1 {
   margin: 0;
@@ -200,7 +201,7 @@ section {
     padding-bottom: 20px;
   }
   #phrase-of-update h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -209,7 +210,6 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0;
   text-align: center;
 }
 #updates header {
@@ -224,17 +224,17 @@ section {
   font-size: 2rem;
 }
 @media screen and (max-width: 700px) {
-  #updates h1 {
-    font-size: 1.4rem;
+  #updates header h1 {
+    font-size: 1.8rem;
   }
 }
 @media screen and (max-width: 500px) {
-  #updates {
+  #updates header {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  #updates h1 {
-    font-size: 1rem;
+  #updates header h1 {
+    font-size: 1.4rem;
   }
 }
 #updates div[name=update-container] {
@@ -290,7 +290,6 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0;
   text-align: center;
 }
 #download header {
@@ -310,17 +309,17 @@ section {
   color: var(--text-color-dark);
 }
 @media screen and (max-width: 700px) {
-  #download h1 {
-    font-size: 1.4rem;
+  #download header h1 {
+    font-size: 1.8rem;
   }
 }
 @media screen and (max-width: 500px) {
-  #download {
+  #download header {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  #download h1 {
-    font-size: 1rem;
+  #download header h1 {
+    font-size: 1.4rem;
   }
 }
 #download div[name=download-container] {
@@ -384,4 +383,16 @@ section {
     font-size: 1rem;
     width: 150px;
   }
+}
+
+#footer-bottom {
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-color-dark);
+  border-top: 1px solid gray;
+}
+#footer-bottom a {
+  color: var(--text-color-dark);
+  transition: all 0.1s ease-in-out;
 }
