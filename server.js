@@ -6,6 +6,7 @@ import { getHTMLRouter } from "./routers/serve_html.js";
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.set("view engine", "ejs");
 app.use(express.json());
 
 app.use("/htmls", getHTMLRouter());
@@ -14,7 +15,7 @@ app.use("/imgs", express.static("./imgs"));
 
 
 app.get("/", (req, resp) => {
-    resp.status(200).send(readFileSync("./htmls/index.html", "utf-8"));
+    resp.status(200).render("./pages/index.ejs");
 });
 
 app.get("/favicon.ico", (req, resp) => {

@@ -1,0 +1,101 @@
+#main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        h1{
+            font-size: 2.5rem;
+            font-weight: 400;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .title h1{
+            font-size: 2rem;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .title h1{
+            font-size: 1.5rem;
+        }
+    }
+    .content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-wrap: wrap;
+        text-align: left;
+        padding: 20px;
+        section{
+            width: calc(100% - 40px);
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+            margin-bottom: 10px;
+            header{
+                text-align: center;
+                h2{
+                    font-size: 2rem;
+                    font-weight: 400;
+                }
+            }
+            h3{
+                margin-top: 30px;
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+            p{
+                font-size: 1.1rem;
+                font-weight: 300;
+                margin: 0;
+            }
+            a{
+                color: var(--accent-color);
+                text-decoration: none;
+                transition: all 0.1s ease-out;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            section header h2{
+                font-size: 2rem;
+            }
+            section h3{
+                font-size: 1.3rem;
+            }
+            section p,ol,ul{
+                font-size: 1rem;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            section header h2{
+                font-size: 1.5rem;
+            }
+            section h3{
+                font-size: 1.1rem;
+            }
+            section p,ol,ul{
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+
+}

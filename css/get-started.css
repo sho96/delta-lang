@@ -1,0 +1,98 @@
+#main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#main-container .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#main-container .title h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+@media screen and (max-width: 700px) {
+  #main-container .title h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  #main-container .title h1 {
+    font-size: 1.5rem;
+  }
+}
+#main-container .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-wrap: wrap;
+  text-align: left;
+  padding: 20px;
+}
+#main-container .content section {
+  width: calc(100% - 40px);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+}
+#main-container .content section header {
+  text-align: center;
+}
+#main-container .content section header h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+#main-container .content section h3 {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+#main-container .content section p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 0;
+}
+#main-container .content section a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all 0.1s ease-out;
+}
+#main-container .content section a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 700px) {
+  #main-container .content section header h2 {
+    font-size: 2rem;
+  }
+  #main-container .content section h3 {
+    font-size: 1.3rem;
+  }
+  #main-container .content section p, #main-container .content ol, #main-container .content ul {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  #main-container .content section header h2 {
+    font-size: 1.5rem;
+  }
+  #main-container .content section h3 {
+    font-size: 1.1rem;
+  }
+  #main-container .content section p, #main-container .content ol, #main-container .content ul {
+    font-size: 0.8rem;
+  }
+}

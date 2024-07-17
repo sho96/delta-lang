@@ -1,99 +1,4 @@
-.text-glow {
-    text-shadow: 1px 1px 1px #fff, 1px 1px 10px #ccc;
-}
 
-nav {
-    position: sticky;
-    top: 0;
-
-    backdrop-filter: blur(15px) brightness(50%);
-
-    padding: 10px;
-    padding-left: 10px;
-    padding-right: 50px;
-
-    font-size: 1.2rem;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 50px;
-
-    border-bottom: 1px solid gray;
-
-    #nav-logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer;
-        img {
-            height: 50px;
-        }
-        h1 {
-            margin: 0;
-            transition: all 0.1s cubic-bezier(1, 0.5, 0.5, 1);
-        }
-        margin-right: 20px;
-    }
-    #nav-logo:hover {
-        h1 {
-            text-shadow: 1px 1px 1px #fff, 1px 1px 10px #ccc;
-        }
-    }
-    .nav-button {
-        a {
-            text-decoration: none;
-            text-align: center;
-            margin: 0;
-            padding: 2px;
-            padding-left: 5px;
-            padding-right: 5px;
-            color: var(--text-color);
-            transition: all 0.2s cubic-bezier(1, 0, 0.5, 1);
-            width: 200px;
-        }
-        cursor: pointer;
-        box-shadow: inset 0 0 0 0 var(--accent-color);
-        border-radius: 3px;
-        transition: all 0.2s cubic-bezier(1, 0, 0.5, 1);
-    }
-    .nav-button:hover {
-        p {
-            color: var(--background-color);
-            transform: scale(1.05);
-        }
-        box-shadow: inset 200px 0 0 0 var(--accent-color);
-    }
-
-    @media screen and (max-width: 700px) {
-        backdrop-filter: blur(10px) brightness(50%);
-
-        gap: 20px;
-        font-size: 1rem;
-        padding-right: 30px;
-
-        #nav-logo {
-            margin-right: 10px;
-            img {
-                height: 30px;
-            }
-            h1 {
-                display: none;
-            }
-        }
-    }
-    @media screen and (max-width: 500px) {
-        gap: 10px;
-        font-size: 0.8rem;
-
-        #nav-logo {
-            margin-right: 5px;
-            img {
-                height: 20px;
-            }
-        }
-    }
-}
 #header-top {
     display: flex;
     flex-direction: row;
@@ -115,7 +20,7 @@ nav {
             width: 200px;
         }
         h1 {
-            text-shadow: 1px 1px 1px #fff, 1px 1px 10px #ccc;
+            text-shadow: 0px 0px 0px #fff, 1px 1px 10px #ccc;
             margin: 0;
             font-size: 7rem;
         }
@@ -206,7 +111,7 @@ section {
     h1 {
         margin: 0;
         font-size: 3rem;
-        text-shadow: 1px 1px 1px #fff, 1px 1px 5px #ccc;
+        text-shadow: 0px 0px 0px #fff, 1px 1px 10px #ccc;
     }
 
     @media screen and (max-width: 700px) {
@@ -373,8 +278,8 @@ section {
         .button-wrap{
             padding: 1px;
             background: linear-gradient(30deg, rgba(255,219,0,0) 0%, rgba(255,0,0,0) 31%, rgba(255,0,231,0) 59%, rgba(221,255,0,0) 91%);
-            transition: all 0.1s ease-in-out;
             height: fit-content;
+            transition: all 0.1s ease-in-out;
         }
         .button-wrap:hover{
             background: linear-gradient(30deg, rgba(255,219,0,1) 0%, rgba(255,0,0,1) 31%, rgba(255,0,231,1) 59%, rgba(221,255,0,1) 91%);
@@ -400,6 +305,7 @@ section {
         }
         a:hover{
             color: var(--text-color);
+            text-shadow: 0px 0px 0px var(--text-color), 0px 0px 20px var(--text-color);
         }
     }
 
@@ -425,15 +331,3 @@ section {
     }
 }
 
-#footer-bottom {
-    padding: 20px;
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--text-color-dark);
-    border-top: 1px solid gray;
-
-    a{
-        color: var(--text-color-dark);
-        transition: all 0.1s ease-in-out
-    }
-}

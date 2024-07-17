@@ -9,24 +9,7 @@
     <title>DELTA</title>
 </head>
 <body>
-    <nav>
-        <div id="nav-logo">
-            <img src="/imgs/logo.svg" alt="">
-            <h1 class="unselectable" target="_blank">DELTA</h1>
-        </div>
-        <div class="nav-button">
-            <a class="unselectable">Get Started</a>
-        </div>
-        <div class="nav-button">
-            <a class="unselectable" target="_blank" href="https://github.com/sho96/Delta">Donwload</a>
-        </div>
-        <div class="nav-button">
-            <a class="unselectable">Docs</a>
-        </div>
-        <div class="nav-button">
-            <a class="unselectable">Devlog</a>
-        </div>
-    </nav>
+    <%- include('../templates/navbar.ejs')%>
     <header id="header-top">
         <div class="left">
             <img src="/imgs/logo.svg" alt="">
@@ -42,13 +25,13 @@
         </section>
         <section id="download">
             <header>
-                <h1>Get Started</h1>
+                <h1>Start Using Delta</h1>
                 <p>currently pre-release</p>
             </header>
             <div name="download-container">
                 <h1>Try Latest Version</h1>
                 <div class="button-wrap">
-                    <a target="_blank" href="https://github.com/sho96/Delta">Get Started</a>
+                    <a target="_blank" href="https://github.com/sho96/Delta">Go to GitHub</a>
                 </div>
             </div>
         </section>
@@ -64,9 +47,6 @@
             </div>
         </section>
     </div>
-    <footer id="footer-bottom">
-        <p class="unselectable">ⓒ 2024 DELTA-LANGUAGE</p>
-        <p class="unselectable">Made by <a href="https://github.com/sho96">sho96</a> on GitHub</p>
-    </footer>
+    <%- include('../templates/footer.ejs')%>
 </body>
 </html>

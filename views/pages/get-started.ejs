@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/get-started.css">
+    <link rel="icon" href="/imgs/logo.svg">
+    <title>DELTA</title>
+</head>
+<body>
+    <%- include('../templates/navbar.ejs')%>
+    <div class="var-width-container" id="main-container">
+        <div class="title">
+            <h1>Get Started with Delta</h1>
+            <p>Delta is currently in pre-release version.</p>
+        </div>
+        <div class="content">
+            <section id="installation">
+                <header>
+                    <h2>Installation</h2>
+                </header>
+                <p>There are currently two ways to install Delta compiler</p>
+                <ol>
+                    <li>Direct Compiler Download (x64 for Windows & Mac only)</li>
+                    <li>Compile from source using PyInstaller</li>
+                </ol>
+
+                <h3>Direct Compiler Download</h3>
+                <p>Delta compiler is currently compiled only for x64 platforms on Windows & Mac. <br>
+                If you are using another platform, you can compile from source using PyInstaller.</p>
+                <br>
+                <p>You can download the compiler from <a target="_blank" href="https://github.com/sho96/Delta/tree/master/compilers">here</a></p>
+
+                <h3>Compile from Source</h3>
+                <p>Requirements:</p>
+                <ul>
+                    <li>Python 3.12+</li>
+                    <li>compile.py from <a target="_blank" href="https://github.com/sho96/Delta/tree/master/compile.py">here</a></li>
+                </ul>
+                <ol>
+                    <li>Install Pyinstaller by <br><br>
+                        <code>pip install pyinstaller</code><br><br>
+                        <p>Make sure you are installing for Python 3.12+</p>
+                    </li>
+                    <br>
+                    <li>Generate compiler executable by <br><br>
+                        <code>pyinstaller --onefile compile.py</code><br><br>
+                        <p>Your compiler will be in <code>./dist</code></p>
+                    </li>
+
+                </ol>
+            </section>
+
+        </div>
+    </div>
+    <%- include('../templates/footer.ejs')%>
+</body>
+</html>

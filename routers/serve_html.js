@@ -6,7 +6,10 @@ const router = express.Router();
 router.use(express.json());
 
 router.get("/", (req, resp) => {
-    resp.status(200).send(readFileSync("./index.html", "utf-8"));
+    resp.redirect("/")
+});
+router.get("/:filename", (req, resp) => {
+    resp.status(200).render(`./pages/${req.params.filename}.ejs`);
 });
 
 export function getHTMLRouter(){
