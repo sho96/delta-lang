@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <%- include('../../templates/meta.ejs')%>
+
+        <link rel="stylesheet" href="/css/global.css" />
+        <link rel="stylesheet" href="/css/docs.css" />
+        <link rel="icon" href="/imgs/logo.svg" />
+        <title>DELTA LANG Documentation</title>
+    </head>
+    <body>
+        <%- include('../../templates/navbar.ejs')%>
+        <div class="var-width-container-narrow" id="main-container">
+            <div class="title">
+                <h1>Delta Documentation</h1>
+                <p>Delta is currently in pre-release phase.</p>
+            </div>
+            <div class="content">
+                <section>
+                    <header>
+                        <h2>Overview</h2>
+                    </header>
+                    <ul>
+                        <li><h3><a style="color: var(--text-color)" href="#basic-usage">Basic usage</a></h3></li>
+                        <li><h3><a style="color: var(--text-color)" href="#supported-features">Supported features</a></h3></li>
+                        <li><h3><a style="color: var(--text-color)" href="#additional-features">Additional features</a></h3></li>
+                    </ul>
+                </section>
+                <section id="basic-usage">
+                    <header>
+                        <h2>Basic Usage</h2>
+                    </header>
+                    <p>Delta can be written in Python, and has <code>.dt</code> extension.</p>
+                    <p>Type annotations are required when declaring new identifiers.</p>
+                    <p>Example:</p>
+                    <p>valid:</p>
+                    <p>
+<code class="multiline">x: int = 0
+print(x)
+x = 1
+print(x)
+</code>
+                    </p>
+                    <p>invalid:</p>
+                    <p>
+<code class="multiline">x = 0
+print(x)
+x = 1
+print(x)</code>
+                    </p>
+                </section>
+                <section id="supported-features">
+                    <header>
+                        <h2>Supported Features</h2>
+                    </header>
+                    <p>Delta is currently in pre-release phase, and doesn't support all the features of Python yet.</p>
+                    <h3>Supported keywords:</h3>
+                    <ul>
+                        <li>
+                            <code>if</code>
+                        </li>
+                        <li>
+                            <code>elif</code>
+                        </li>
+                        <li>
+                            <code>else</code>
+                        </li>
+                        <li>
+                            <code>for</code>
+                        </li>
+                        <li>
+                            <code>while</code>
+                        </li>
+                        <li>
+                            <code>from ... import ...</code>
+                        </li>
+                        <li>
+                            <code>pass</code>
+                        </li>
+                        <li>
+                            <code>break</code>
+                        </li>
+                        <li>
+                            <code>continue</code>
+                        </li>
+                        <li>
+                            <code>return</code>
+                        </li>
+                        <li>
+                            <code>assert</code>
+                        </li>
+                        <li>
+                            <code>del</code>
+                        </li>
+                    </ul>
+                    <h3>Supported special syntaxes:</h3>
+                    <ul>
+                        <li>f-strings</li>
+                    </ul>
+                    <h3>Supported built-in functions:</h3>
+                    <ul>
+                        <p>built-in:</p>
+                        <li>
+                            <code>print(object, end="\n")</code>
+                        </li>
+                        <li>
+                            <code>input("prompt") -> str</code>
+                        </li>
+                        <li>
+                            <code>len(iterable) -> int</code>
+                        </li>
+                        <li>
+                            <code>int(str) -> int</code>
+                        </li>
+                        <li>
+                            <code>float(str) -> float</code>
+                        </li>
+                        <li>
+                            <code>str(object) -> str</code>
+                        </li>
+                        <li>
+                            <code>list(str) -> list[str]</code>
+                        </li>
+                        <li>
+                            <code>min(str|list|set) -> element dtype</code>
+                        </li>
+                        <li>
+                            <code>max(str|list|set) -> element dtype</code>
+                        </li>
+                        <li>
+                            <code>sum(str|list|set) -> element dtype</code>
+                        </li>
+                        <li>
+                            <code>sorted(str|list|set) -> list[element dtype]</code>
+                        </li>
+                        <li>
+                            <code>round(float) -> float</code>
+                        </li>
+                        <li>
+                            <code>abs(int|float) -> int|float</code>
+                        </li>
+                        <p>special functions:</p>
+                        <li>
+                            <code>cpp(str)</code>
+                        </li>
+                    </ul>
+                </section>
+                <section id="additional-features">
+                    <header>
+                        <h2>Additional Features</h2>
+                    </header>
+                    <ul>
+                        <li>
+                            <h3><code>cpp(str)</code></h3>
+                            <p>injects C++ code into the program</p>
+                            <p>Example:</p>
+                            <p><code>x: int = cpp("time(nullptr)")</code> translates to <code>int x = time(nullptr);</code></p>
+                        </li>
+                        <li>
+                            <h3><code>from cpp[ext] import ..</code></h3>
+                            <p>adds #include statement at the top of the compiled C++ file</p>
+                            <p>Examples:</p>
+                            <ul>
+                                <li><code>from cpp import cmath</code> translates to <code>#include &lt;cmath&gt;</code></li>
+                                <li><code>from cpph import time</code> translates to <code>#include &lt;time.h&gt;</code></li>
+                                <li><code>from cpphpp import opencv</code> translates to <code>#include &lt;opencv.hpp&gt;</code></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p>Example uses can be found <a target="_blank" href="https://github.com/sho96/Delta/tree/master/dtfiles">here</a></p>
+                </section>
+            </div>
+        </div>
+        <%- include('../../templates/footer.ejs')%>
+    </body>
+</html>

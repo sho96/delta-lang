@@ -71,9 +71,10 @@
   font-weight: 300;
   line-height: 1.5;
 }
-#main-container .content section ol.li, #main-container .content section ul.li {
-  font-size: 1.2rem;
+#main-container .content section li {
+  font-size: 1.1rem;
   font-weight: 300;
+  line-height: 1.7rem;
 }
 @media screen and (max-width: 700px) {
   #main-container .content section header h2 {
@@ -82,11 +83,12 @@
   #main-container .content section h3 {
     font-size: 1.3rem;
   }
-  #main-container .content section p, #main-container .content ol, #main-container .content ul {
+  #main-container .content section p {
     font-size: 1.1rem;
   }
-  #main-container .content section ol.li, #main-container .content ul.li {
-    font-size: 1.2rem;
+  #main-container .content section li {
+    font-size: 1.1rem;
+    line-height: 1.7rem;
   }
 }
 @media screen and (max-width: 500px) {
@@ -96,10 +98,11 @@
   #main-container .content section h3 {
     font-size: 1.1rem;
   }
-  #main-container .content section p, #main-container .content ol, #main-container .content ul {
+  #main-container .content section p {
     font-size: 0.8rem;
   }
-  #main-container .content section ol.li, #main-container .content ul.li {
-    font-size: 0.9rem;
+  #main-container .content section li {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
   }
 }

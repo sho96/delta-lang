@@ -20,6 +20,10 @@
   background: #555;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   --background-color: #000000;
   --background-color-barely-light: #0f0f0f;
@@ -44,12 +48,28 @@ body {
 code {
   font-family: "Roboto Mono", monospace;
   background-color: var(--background-color-lighter);
+  font-weight: 400;
   margin: 3px;
   padding: 1px;
   padding-left: 3px;
   padding-right: 3px;
   border-radius: 5px;
   width: fit-content;
+}
+
+code[class=multiline] {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  display: block;
+  text-align: left;
+  background-color: var(--background-color-lighter);
+  height: fit-content;
+  width: fit-content;
+  min-width: 50%;
+  padding: 10px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
 }
 
 a {
