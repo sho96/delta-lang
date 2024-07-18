@@ -60,7 +60,8 @@ code{
     border-radius: 5px;
     width: fit-content;
 }
-code[class="multiline"]{
+pre{
+    margin: 10px;
     white-space: pre-wrap;
     word-wrap: break-word;
     word-break: break-all;
@@ -69,6 +70,7 @@ code[class="multiline"]{
     background-color: var(--background-color-lighter);
     height: fit-content;
     width: fit-content;
+    border-radius: 5px;
     min-width: 50%;
     padding: 10px;
     font-family: "Roboto Mono", monospace;

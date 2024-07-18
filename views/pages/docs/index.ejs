@@ -36,21 +36,23 @@
                     <p>Delta can be written in Python, and has <code>.dt</code> extension.</p>
                     <p>Type annotations are required when declaring new identifiers.</p>
                     <p>Example:</p>
-                    <p>valid:</p>
-                    <p>
-<code class="multiline">x: int = 0
+                    <ul>
+
+                    </ul>
+                    <li>valid:</li>
+<pre>
+x: int = 0
 print(x)
 x = 1
 print(x)
-</code>
-                    </p>
-                    <p>invalid:</p>
-                    <p>
-<code class="multiline">x = 0
+</pre>
+                    <li>invalid:</li>
+<pre>
+x = 0
 print(x)
 x = 1
-print(x)</code>
-                    </p>
+print(x)
+</pre>
                 </section>
                 <section id="supported-features">
                     <header>
@@ -164,9 +166,9 @@ print(x)</code>
                             <p>adds #include statement at the top of the compiled C++ file</p>
                             <p>Examples:</p>
                             <ul>
-                                <li><code>from cpp import cmath</code> translates to <code>#include &lt;cmath&gt;</code></li>
-                                <li><code>from cpph import time</code> translates to <code>#include &lt;time.h&gt;</code></li>
-                                <li><code>from cpphpp import opencv</code> translates to <code>#include &lt;opencv.hpp&gt;</code></li>
+                                <li><code>from cpp import cmath</code> => <code>#include &lt;cmath&gt;</code></li>
+                                <li><code>from cpph import time</code> => <code>#include &lt;time.h&gt;</code></li>
+                                <li><code>from cpphpp import opencv</code> => <code>#include &lt;opencv.hpp&gt;</code></li>
                             </ul>
                         </li>
                     </ul>
