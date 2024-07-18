@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <%- include('../../templates/meta.ejs')%>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="/css/global.css" />
-        <link rel="stylesheet" href="/css/docs.css" />
-        <link rel="icon" href="/imgs/logo.svg" />
-        <title>DELTA LANG Documentation</title>
-    </head>
-    <body>
-        <%- include('../../templates/navbar.ejs')%>
+    <%- include('../../templates/meta.ejs')%>
+        <%- include('../../templates/links.ejs')%>
+
+            <link rel="stylesheet" href="/css/global.css" />
+            <link rel="stylesheet" href="/css/docs.css" />
+            <link rel="icon" href="/imgs/logo.svg" />
+            <title>DELTA LANG Documentation</title>
+</head>
+
+<body>
+    <%- include('../../templates/navbar.ejs')%>
         <div class="var-width-container-narrow" id="main-container">
             <div class="title">
                 <h1>Delta Documentation</h1>
@@ -24,9 +27,20 @@
                         <h2>Overview</h2>
                     </header>
                     <ul>
-                        <li><h3><a style="color: var(--text-color)" href="#basic-usage">Basic usage</a></h3></li>
-                        <li><h3><a style="color: var(--text-color)" href="#supported-features">Supported features</a></h3></li>
-                        <li><h3><a style="color: var(--text-color)" href="#additional-features">Additional features</a></h3></li>
+                        <li>
+                            <h3><a style="color: var(--text-color)" href="#basic-usage">Basic usage</a></h3>
+                        </li>
+                        <li>
+                            <h3><a style="color: var(--text-color)" href="#type-annotations">Type annotations</a></h3>
+                        </li>
+                        <li>
+                            <h3><a style="color: var(--text-color)" href="#supported-features">Supported features</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3><a style="color: var(--text-color)" href="#additional-features">Additional features</a>
+                            </h3>
+                        </li>
                     </ul>
                 </section>
                 <section id="basic-usage">
@@ -38,25 +52,79 @@
                     <p>Example:</p>
                     <ul>
 
-                    </ul>
-                    <li>valid:</li>
-<p>
-<pre>
+                        <li>valid:</li>
+                        <p>
+                        <pre class="language-python syntax-highlight">
 x: int = 0
 print(x)
 x = 1
 print(x)
 </pre>
-</p>
-                    <li>invalid:</li>
-<p>
-<pre>
+                        </p>
+                        <li>invalid:</li>
+                        <p>
+                        <pre class="language-python syntax-highlight">
 x = 0
 print(x)
 x = 1
 print(x)
 </pre>
-</p>
+                        </p>
+                    </ul>
+                </section>
+                <section id="type-annotations">
+                    <header>
+                        <h2>Type Annotations</h2>
+                    </header>
+                    <p>Delta requires type annotations when declaring new identifiers</p>
+                    <h3>Variables</h3>
+                    <p>Basic</p>
+                    <pre class="language-python syntax-highlight">
+number: int = 0 
+number: int #This is also vaild
+</pre>
+                    <p>Subscripts</p>
+                    <pre class="language-python syntax-highlight">
+list_var: list[int]
+dict_var: dict[str, int] #str as key, int as value
+set_var: set[float]
+tuple_var: tuple[int, float, str] #datatypes of elements must be specified
+
+mixed_var: list[tuple[str, dict[int, str]]]
+</pre>
+                    <h3>Functions</h3>
+                    <p>Basic</p>
+                    <pre class="language-python syntax-highlight">
+def print_person(name: str, age: int) -> None:
+    print(name, age)
+</pre>
+                    <p>Keyword arguments</p>
+                    <pre class="language-python syntax-highlight">
+def calc_vel(target: float, base: float = 0) -> float:
+    return target - base
+</pre>
+                    <h3>Example:</h3>
+                    <p>
+                    <pre class="language-python syntax-highlight">
+def print_person(name: str, age: int) -> None:
+    print(f"{name} is {age} years old")
+
+def print_people(people: list[tuple[str, int]]) -> None:
+    for person in people:
+        print_person(person[0], person[1])
+
+
+people: list[tuple[str, int]] = []
+while True:
+    name: str = input("Enter name: ")
+    if name == "":
+        break
+    age: int = int(input("Enter age: "))
+    people.append((name, age))
+
+print_people(people)
+</pre>
+                    </p>
                 </section>
                 <section id="supported-features">
                     <header>
@@ -110,7 +178,7 @@ print(x)
                     <ul>
                         <p>built-in:</p>
                         <li>
-                            <code>print(object, end="\n")</code>
+                            <code>print(object, end="\n") -> None</code>
                         </li>
                         <li>
                             <code>input("prompt") -> str</code>
@@ -158,29 +226,49 @@ print(x)
                     <header>
                         <h2>Additional Features</h2>
                     </header>
-                    <ul>
-                        <li>
-                            <h3><code>cpp(str)</code></h3>
+                    <div class="top-bottom-section">
+                        <div name="top">
+                            <h3><code
+                                    class="syntax-highlight language-python">cpp(str)</code></h3>
+                        </div>
+                        <div name="bottom">
                             <p>injects C++ code into the program</p>
                             <p>Example:</p>
-                            <p><code>x: int = cpp("time(nullptr)")</code> translates to <code>int x = time(nullptr);</code></p>
-                        </li>
-                        <li>
-                            <h3><code>from cpp[ext] import ..</code></h3>
+                            <p><code class="syntax-highlight language-python">x: int = cpp("time(nullptr)")</code></p>
+                        </div>
+                    </div>
+
+                    <div class="top-bottom-section">
+                        <div name="top">
+                            <h3><code
+                                    class="syntax-highlight language-python">from cpp[ext] import ..</code></h3>
+                        </div>
+                        <div name="bottom">
                             <p>adds #include statement at the top of the compiled C++ file</p>
                             <p>Examples:</p>
-                            <ul>
-                                <li><code>from cpp import cmath</code> => <code>#include &lt;cmath&gt;</code></li>
-                                <li><code>from cpph import time</code> => <code>#include &lt;time.h&gt;</code></li>
-                                <li><code>from cpphpp import opencv</code> => <code>#include &lt;opencv.hpp&gt;</code></li>
-                            </ul>
-                        </li>
-                    </ul>
+                            <p>
+                                <code class="syntax-highlight language-python">from cpp import cmath</code> => <code
+                                    class="syntax-highlight language-cpp">#include &lt;cmath&gt;</code>
+                            </p>
+                            <p>
+                                <code class="syntax-highlight language-python">from cpph import time</code> => <code
+                                    class="syntax-highlight language-cpp">#include &lt;time.h&gt;</code>
+                            </p>
+                            <p>
+                                <code class="syntax-highlight language-python">from cpphpp import opencv</code> =>
+                                <code class="syntax-highlight language-cpp">#include &lt;opencv.hpp&gt;</code>
+                            </p>
+                        </div>
+                    </div>
 
-                    <p>Example uses can be found <a target="_blank" href="https://github.com/sho96/Delta/tree/master/dtfiles">here</a></p>
+
+                    <p>Example uses can be found <a target="_blank"
+                            href="https://github.com/sho96/Delta/tree/master/dtfiles">here</a></p>
                 </section>
             </div>
         </div>
         <%- include('../../templates/footer.ejs')%>
-    </body>
+</body>
+<script src="/js/syntax-highlight.js"></script>
+
 </html>

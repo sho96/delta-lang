@@ -12,6 +12,7 @@ app.use(express.json());
 app.use("/htmls", getHTMLRouter());
 app.use("/css", express.static("./css"));
 app.use("/imgs", express.static("./imgs"));
+app.use("/js", express.static("./js"));
 
 
 app.get("/", (req, resp) => {

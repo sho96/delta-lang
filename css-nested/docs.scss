@@ -74,7 +74,13 @@
             li{
                 font-size: 1.1rem;
                 font-weight: 300;
-                line-height: 1.7rem;
+                line-height: 2rem;
+            }
+            .top-bottom-section{
+                margin-bottom: 20px;
+                div[name="bottom"]{
+                    margin-left: 10px;
+                }
             }
         }
         @media screen and (max-width: 700px) {
@@ -89,7 +95,7 @@
             }
             section li{
                 font-size: 1.1rem;
-                line-height: 1.7rem;
+                line-height: 1.8rem;
             }
         }
         @media screen and (max-width: 500px) {
@@ -104,10 +110,8 @@
             }
             section li{
                 font-size: 0.8rem;
-                line-height: 1.3rem;
+                line-height: 1.6rem;
             }
         }
     }
-
-
 }

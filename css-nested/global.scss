@@ -13,12 +13,13 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #2a2a2a;
+    background-color: rgba($color: #fff, $alpha: 0.15);
+    transition: all 0.1s ease-in-out;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: rgba($color: #fff, $alpha: 0.2);
 }
 
 html{
@@ -59,12 +60,11 @@ code{
     padding-right: 3px;
     border-radius: 5px;
     width: fit-content;
+    text-wrap: nowrap;
 }
 pre{
     margin: 10px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-all;
+    overflow-x: scroll;
     display: block;
     text-align: left;
     background-color: var(--background-color-lighter);
@@ -73,8 +73,21 @@ pre{
     border-radius: 5px;
     min-width: 50%;
     padding: 10px;
+    max-width: 70vw;
     font-family: "Roboto Mono", monospace;
     font-weight: 400;
+
+    --ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+pre * {
+    background-color: inherit;
+}
+.hljs, .hljs * {
+    background: #2b2b2b !important; /* Set your desired background color */
 }
 a{
     color: var(--accent-color);
