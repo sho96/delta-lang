@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <%- include('../../templates/meta.ejs')%>
-        <%- include('../../templates/links.ejs')%>
+    <%- include('../../templates/links.ejs')%>
 
-            <link rel="stylesheet" href="/css/global.css" />
-            <link rel="stylesheet" href="/css/docs.css" />
-            <link rel="icon" href="/imgs/logo.svg" />
-            <title>DELTA LANG Documentation</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/docs.css" />
+    <link rel="icon" href="/imgs/logo.svg" />
+    <title>DELTA LANG Documentation</title>
 </head>
 
 <body>
@@ -199,16 +199,16 @@ print_people(people)
                             <code>list(str) -> list[str]</code>
                         </li>
                         <li>
-                            <code>min(str|list|set) -> element dtype</code>
+                            <code>min(str|list|set) -> elem dtype</code>
                         </li>
                         <li>
-                            <code>max(str|list|set) -> element dtype</code>
+                            <code>max(str|list|set) -> elem dtype</code>
                         </li>
                         <li>
-                            <code>sum(str|list|set) -> element dtype</code>
+                            <code>sum(str|list|set) -> elem dtype</code>
                         </li>
                         <li>
-                            <code>sorted(str|list|set) -> list[element dtype]</code>
+                            <code>sorted(str|list|set) -> list[elem dtype]</code>
                         </li>
                         <li>
                             <code>round(float) -> float</code>
@@ -228,8 +228,7 @@ print_people(people)
                     </header>
                     <div class="top-bottom-section">
                         <div name="top">
-                            <h3><code
-                                    class="syntax-highlight language-python">cpp(str)</code></h3>
+                            <h3><code class="syntax-highlight language-python">cpp(str)</code></h3>
                         </div>
                         <div name="bottom">
                             <p>injects C++ code into the program</p>
@@ -240,8 +239,7 @@ print_people(people)
 
                     <div class="top-bottom-section">
                         <div name="top">
-                            <h3><code
-                                    class="syntax-highlight language-python">from cpp[ext] import ..</code></h3>
+                            <h3><code class="syntax-highlight language-python">from cpp[ext] import ..</code></h3>
                         </div>
                         <div name="bottom">
                             <p>adds #include statement at the top of the compiled C++ file</p>
