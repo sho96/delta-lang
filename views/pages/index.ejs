@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <%- include('../templates/meta.ejs')%>
+        <%- include('../templates/links.ejs')%>
 
         <link rel="stylesheet" href="/css/global.css" />
         <link rel="stylesheet" href="/css/index.css" />
@@ -26,6 +27,23 @@
             <section id="phrase-of-update">
                 <h1>Write in Python<br />Run in C++</h1>
             </section>
+            <section id="show-off">
+<h3>Python</h3>
+<pre class="syntax-highlight language-python show-off">
+name: str = input("What's your name: ")
+print(f"Hello, {name}!")
+</pre>
+<h3><span class="material-symbols-outlined">arrow_downward</span></h3>
+<h3>C++</h3>
+<pre class="syntax-highlight language-cpp show-off">
+int main(){
+    std::string name = __userinput("What's your name: ");
+    std::cout << "Hello, " << name << "!";
+
+    return 0;
+}
+</pre>
+            </section>
             <section id="download">
                 <header>
                     <h1>Start Using Delta</h1>
@@ -44,7 +62,11 @@
                 </header>
                 <div name="update-container">
                     <div class="update">
-                        <h2>Added Little Docs</h2>
+                        <h2>Added little more docs</h2>
+                        <p>Jul 19, 2024</p>
+                    </div>
+                    <div class="update">
+                        <h2>Added little docs</h2>
                         <p>Jul 18, 2024</p>
                     </div>
                     <div class="update">
@@ -56,6 +78,7 @@
         </div>
         <%- include('../templates/footer.ejs')%>
     </body>
+    <script src="/js/syntax-highlight.js"></script>
     <script>
         window.va =
             window.va ||

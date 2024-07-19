@@ -59,7 +59,7 @@ code {
   text-wrap: nowrap;
 }
 
-pre {
+pre, .hljs {
   margin: 10px;
   overflow-x: scroll;
   display: block;
@@ -72,21 +72,19 @@ pre {
   max-width: 80vw;
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
+  font-size: 1rem;
   --ms-overflow-style: none;
   scrollbar-width: none;
 }
-pre::-webkit-scrollbar {
+pre::-webkit-scrollbar, .hljs::-webkit-scrollbar {
   display: none;
 }
 
-pre * {
-  background-color: inherit;
+@media screen and (max-width: 500px) {
+  pre, .hljs {
+    font-size: 0.8rem;
+  }
 }
-
-.hljs, .hljs * {
-  background: #2b2b2b !important; /* Set your desired background color */
-}
-
 a {
   color: var(--accent-color);
   text-decoration: none;
